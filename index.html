@@ -10,8 +10,19 @@
 <meta name="apple-mobile-web-app-title" content="محمود الدرعمي">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" href="icon-192.png">
-<title>بطاقة الأستاذ محمود بن صلاح الدرعمي</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="description" content="مُعلِّم قرآن كريم عن بعد">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="مَحْمُودٌ بْنُ صَلَاحٍ الدَّرْعَمِيُّ - بورتفوليو">
+<meta property="og:description" content="مُعلِّم قرآن كريم عن بعد">
+<meta property="og:image" content="https://aldaramy.github.io/mahmoud-card/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="مَحْمُودٌ بْنُ صَلَاحٍ الدَّرْعَمِيُّ - بورتفوليو">
+<meta name="twitter:image" content="https://aldaramy.github.io/mahmoud-card/og-image.jpg">
+<title>مَحْمُودٌ بْنُ صَلَاحٍ الدَّرْعَمِيُّ - بورتفوليو</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -57,6 +68,24 @@ textarea{width:100%;height:150px;direction:ltr;background:#050818;color:var(--te
 [hidden]{display:none!important}
 .toast{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));left:50%;transform:translate(-50%,30px);background:var(--gold);color:#1a1300;padding:10px 20px;border-radius:30px;font-size:14px;opacity:0;pointer-events:none;transition:.3s;z-index:30;max-width:90%;text-align:center}
 .toast.on{opacity:1;transform:translate(-50%,0)}
+.cv{text-align:right;margin-bottom:16px}
+.cv details{border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:10px;overflow:hidden;transition:border-color .2s}
+.cv details[open]{border-color:var(--gold);background:rgba(212,175,55,.06)}
+.cv summary{list-style:none;cursor:pointer;padding:14px 16px;font:700 17px/1.7 'Amiri',serif;color:var(--gold2);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cv summary::-webkit-details-marker{display:none}
+.cv summary:after{content:"";flex:none;width:9px;height:9px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg);transition:transform .25s}
+.cv details[open] summary:after{transform:rotate(135deg)}
+.cvb{padding:0 16px 14px;animation:cvo .3s ease}
+@keyframes cvo{from{opacity:0;transform:translateY(-6px)}}
+.cvb ul{list-style:none;margin:0;padding:0}
+.cvb li{position:relative;padding:8px 24px 8px 0;font-size:14px;line-height:2;color:var(--text);border-top:1px solid rgba(212,175,55,.12)}
+.cvb li:first-child{border-top:0}
+.cvb li:before{content:"✧";position:absolute;right:0;top:8px;color:var(--gold)}
+.cvb ul.plain li{padding-right:0}.cvb ul.plain li:before{content:none}
+.cvb li small{display:block;font-size:13px;line-height:1.9;color:var(--muted)}
+.cvb a{color:#7fb8ff;text-decoration:underline;text-underline-offset:4px}
+.btn.or{border-color:rgba(255,121,0,.6)}.btn.or i{color:#ff7900}
+.btn.vf{border-color:rgba(230,0,0,.6)}.btn.vf i{color:#ff4040}
 </style>
 </head>
 <body>
@@ -66,15 +95,67 @@ textarea{width:100%;height:150px;direction:ltr;background:#050818;color:var(--te
   <h1>مَحْمُودٌ بْنُ صَلَاحٍ</h1>
   <h2>الدَّرْعَمِيُّ</h2>
   <div class="role">مُعلِّم قرآن كريم عن بعد</div>
-  <p class="bio"><b>مَحْمُودٌ بْنُ صَلَاحٍ الدَّرْعَمِيُّ</b>، حافظٌ لكتاب الله عزَّ وجلَّ منذ الصَّفِّ الثَّالِث الإعدادي، وحاصلٌ علىٰ إجازةٍ في القاعدة النُّورانيَّة بالسَّند المُتَّصل لمؤلِّفها الشَّيخ نور مُحمَّد حقَّاني. خرِّيج كليَّة دار العلوم - جامعة المنيا (2025م - 2026م)، حاصلٌ علىٰ ليسانس اللُّغة العربيَّة وآدابها والعلوم الإسلاميَّة، ودورات مُعتمَدة مِنْ مركز التَّدريب اللُّغوي بجامعة القاهرة.</p>
   <div class="orn"></div>
+  <div class="cv">
+   <details name="cv" open><summary>مُلخَّص شَخصِي</summary><div class="cvb"><ul class="plain">
+    <li>مَحْمُودٌ بْنُ صَلَاحٍ الدَّرْعَمِيُّ، حافظٌ لكتاب الله عزَّ وجلَّ منذ الصَّف الثَّالِث الإعدادي، وحاصلٌ علىٰ <a href="https://drive.google.com/file/d/1xgRhF0ZPu7yP4G4IWrZ0YFPKgo7MOsHR/view?usp=sharing" target="_blank" rel="noopener">إجازَة في القَاعِدَة النُّورانيَّة</a> بالسَّند المُتَّصل لمؤلِّفها الشِّيخ نور مُحمَّد حقَّانِي. خرِّيج كليَّة دار العلوم - جامعة المنيا (2025م - 2026م)، حَاصِلٌ علىٰ ليسانس اللُّغة العربيَّة وآدابها والعلوم الإسلاميَّة (<a href="https://drive.google.com/file/d/1J1zLlNl3c7jTlfWM0rFIFRYWCMAM7EHT/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة التَّخرُّج</a>)، وحَاصلٌ علىٰ دورات مُعتَمدَة مِنْ مَركَز التَّدرِيب اللُّغوِي بجَامِعَة القَاهِرَة.</li>
+   </ul></div></details>
+   <details name="cv"><summary>المؤهَّلات العلميَّة</summary><div class="cvb"><ul>
+    <li>حَاصِلٌ علىٰ اللِّيسانس في اللُّغة العربيَّة وآدابها والعلوم الإسلاميَّة مِنْ كليَّة دار العلوم بجامعة المنيا (2025م - 2026م).</li>
+    <li>حَافِظٌ لكتاب الله عزَّ وجلَّ منذ الصَّف الثَّالِث الإعدادي.</li>
+    <li><a href="https://drive.google.com/file/d/1xgRhF0ZPu7yP4G4IWrZ0YFPKgo7MOsHR/view?usp=sharing" target="_blank" rel="noopener">مُجَازٌ</a>، ومُجِيزٌ في القَاعِدَة النُّورانيَّة بالسَّند المتَّصل لمؤلِّفها الشِّيخ نور مُحمَّد حقَّانِي - بتاريخ 5 - 2 - 2026م الموافق 17 مِنْ شهر شعبان عام 1447هـ، وقُمتُ بتدريسها عن بُعد لمجموعةٍ مِنَ الطُّلَّاب، ومنحهم الإجازة بعد إتمَام الكِتَاب بنجاح (<a href="https://drive.google.com/file/d/1mR7JzgRMjQqfIc9XLqc9jhJ_wHo8pOV2/view?usp=drive_link" target="_blank" rel="noopener">إِجَازَات بَعْض المَشَايِخ</a>).</li>
+   </ul></div></details>
+   <details name="cv"><summary>الدَّورات، والنَّدوات العِلميَّة، والشَّهَادَات</summary><div class="cvb"><ul>
+    <li>دَورَة "مَهَارَات المُرَاجَعَة والتَّصحِيح اللُّغوِيّ" - سبتمبر 2026م - مَركَز التَّدرِيب اللُّغوِي بجامعة القاهرة (<a href="https://drive.google.com/file/d/1cUhabW83mjrqL6flNm3TmhVcUDgtH4VM/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+    <li>دَورَة "التَّدقِيق الإملائيّ" - 10 نوفمبر 2025م - أكاديميَّة غيضٌ مِنْ فيض، بواقع 15 ساعة تدريبيَّة (<a href="https://drive.google.com/file/d/18DYMZRpjzWQHwE3mADRRizDSo9M51HMS/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة حضور</a>).</li>
+    <li>دَورَة "التَّدقِيق اللُّغوِيّ" - جَمعِيَّة رعاية الحفظة بالمنيا بالتَّعَاوُن مع شركة عبقر للخدمات اللُّغوِيَّة (<a href="https://drive.google.com/file/d/1AVb92tY7rTo_dAFrb2R-D5Su7Q106ZZw/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة حضور</a>).</li>
+    <li>دَورَة "الثَّوَابِت النَّحوِيَّة" - أكاديميَّة مكَّاوِي للتَّدرِيب اللُّغوِيّ - عن بعد (شَهَادَة حضور).</li>
+    <li>دَورَة "شرح كتاب التَّنوِين أنواعه، والكلمات الممنوعة منه" - سبتمبر 2024م - أكاديميَّة مكَّاوِي للتَّدرِيب اللُّغوِي - عن بعد (<a href="https://drive.google.com/file/d/1xxtROq54tMssoJ5A8yXCNuddzrp5CFFF/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة إِجَازَة مُعتَمدَة</a>).</li>
+    <li>دَورَة "مُقدِّمَة في علم الصَّرف" - أكتوبر 2025م - منصَّة رواق (<a href="https://drive.google.com/file/d/1mjaWHC9bIJakcTPE1USpN6btGEk4aL03/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة اجتياز</a>).</li>
+    <li>حَاصِلٌ علىٰ المَركَز الثَّانِي في مُسَابَقَةٍ بحثيَّة علىٰ مستوىٰ الكليَّة، بعنوان "التَّجلِّيات الأدبيَّة لحرب أكتوبر: دِرَاسَةٌ في الإبداع والتَّوثِيق"، وتمَّ تَكرِيمِي مِنْ عَمِيد الكليَّة بشهَادَة تَقدِير (<a href="https://drive.google.com/file/d/1pqJlVJfIWYXa6sEI4Ct6BrRSpljyKPw3/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة تَقدِير</a>).</li>
+    <li>دَورَة "إِعدَاد مُعلِّم العَرَبِيَّة للنَّاطِقِين بغيرها" - إبريل 2026م - مَركَز التَّدرِيب اللُّغوِي بجامعة القاهرة (<a href="https://drive.google.com/file/d/1WSd2EpGUa8wnXcO630qc0YMRzzETBaZ5/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+    <li>دَورَة "مَسَارَات في تَعلِيم العَرَبِيَّة لغير النَّاطِقِين بِهَا" - نوفمبر 2025م - مَركَز كَلِمَة (<a href="https://drive.google.com/file/d/1JuOA2vjtiEGQ_Yf0b5rxA2jCNFGIAQ6m/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة حضور</a>).</li>
+    <li>نَدوَة "تَجَارُب رَائِدَة في تَعلِيم اللُّغَة العَرَبِيَّة للنَّاطِقِين بغيرها: رؤى وتطبيقات" - 22 ديسمبر 2025م - مَركَز اللُّغَات بجامعة البَلقَاء التَّطبِيقيَّة (<a href="https://drive.google.com/file/d/13RrVxx2nBkq2GkQrsTMrzW4IQecH8iQj/view?usp=sharing" target="_blank" rel="noopener">شَهادَة مُشَارَكَة</a>).</li>
+    <li>دَورَة "الحفظ المُتقن أسس ومهارات" - 21 أكتوبر 2026م - مَركَز التَّدرِيب القُرآنِي "مُؤهَّلون" التَّابِع لجمعيَّة مكنون لتحفيظ القرآن الكريم بالرِّيَاض (<a href="https://drive.google.com/file/d/18b07-82ZILC839974ekFTXBu0z8HqI41/view?usp=sharing" target="_blank" rel="noopener">شَهادَة حضور</a>).</li>
+    <li>دَورَة "مَهَارَات تَصمِيم العَرْض التَّقدِيمي" - 14 أكتوبر 2026م - مَركَز التَّدرِيب القُرآنِي "مُؤهَّلون" التَّابِع لجمعيَّة مكنون لتحفيظ القرآن الكريم بالرِّيَاض (<a href="https://drive.google.com/file/d/1rYMj8x-NMw7XtsAMbZaKAEuNg8IJFJTN/view?usp=sharing" target="_blank" rel="noopener">شَهادَة حضور</a>).</li>
+    <li><bdi>New ICDL</bdi> - 27 نوفمبر 2024م - مَركَز تكنولوجيا المَعلُومَات بجامعة المنيا (<a href="https://drive.google.com/file/d/1_382YQaYbi_fx93WiYogwiHEcQ1f8QGG/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+    <li><bdi>Teacher ICDL</bdi> - 7 مايو 2024م - مَركَز تكنولوجيا المَعلُومَات بجامعة المنيا (<a href="https://drive.google.com/file/d/1IxfN4d4Zt6Ek1XnqJXAtKP2CflpEPnti/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+    <li><bdi>Introduction To Freelancing</bdi> - 16 نوفمبر 2025م - مَعهَد كرياتيفا بجامعة المنيا (<a href="https://drive.google.com/file/d/1_Fi1cLLkiZfFEpw-PKIbEHxamuKQT3F0/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+    <li><bdi>Career Hacks</bdi> - 29 نوفمبر 2025م - مَعهَد كرياتيفا بجامعة المنيا (<a href="https://drive.google.com/file/d/1u4LIC0hm2Cl8bX4mA8rzmTZftiKvJ_bv/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+    <li><bdi>Word Processing</bdi> - نوفمبر 2025م - منصَّة إدراك (<a href="https://drive.google.com/file/d/1vxPaHVkvNgzN-zE-jFEBvsBDrVeN_l_C/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+    <li>دَورَة "احترف لينكد ان" - نوفمبر 2025م - منصَّة مَعَارِف (<a href="https://drive.google.com/file/d/1AiuYSNnBbQ3ZKgZrsdhWeL1YOJ5HhpjX/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>)</li>
+    <li>حضور برنامج " Module 1 Employability Skills" مِنْ مُبادَرَة كُنْ مُستَعدًا، والَّتِي عُقِدَت حضوريًا بمَركَز التَّطوِير المهنيّ بجامعة المنيا (<a href="https://drive.google.com/file/d/1hYmkF22ijh-js1rjU7Ym8r-mXBg9T2lp/view?usp=sharing" target="_blank" rel="noopener">شَهَادَة مُعتَمدَة</a>).</li>
+   </ul></div></details>
+   <details name="cv"><summary>الخبرات المهنيَّة</summary><div class="cvb"><ul>
+    <li>مُدرِّس لكتاب القَاعِدَة النُّورَانِيَّة، ومُجِيزٌ.</li>
+    <li>مُدقّق لُغوِي مُستقلّ (Freelancer) - خلال السَّنة الأخيرة.<small>وذلك لمُراجَعة النُّصوص، وضمان خلوِّها مِنَ الأخطاء النَّحْويّة والإملائيَّة.</small></li>
+    <li>كَاتِب ومُنسِّق أبحاث (Freelancer) - منذ 3 سنوات حتّىٰ الآن.<small>كتابة مذكَّرات، وامتحانات باللُّغة العربيّة.</small><small>تَنسِيق الأبحاث العلميَّة باستخدام Adobe InDesign و Microsoft Word.</small></li>
+    <li>مُصمِّم إعلانات (Freelancer) - منذ 3 سنوات حتّىٰ الآن.<small>تَصمِيم إعلانات ومنشورات للعملاء باستخدام بَرامِج التَّصمِيم مثل Canva.</small></li>
+    <li>مُصمِّم سير ذاتيَّة (CV Designer) - منذ 3 سنوات حتّىٰ الآن.<small>تَصمِيم وكتابة سير ذاتيّة بأسلوبَيْ ATS، والتَّصمِيم الإبْدَاعِي.</small></li>
+    <li>إِدخَال البيانات (Freelancer) - منذ 3 سنوات حتّىٰ الآن.<small>إِدخَال وتنظيم بيانات دَقِيقَة، وإعداد جَداوِل وتَقَارِير مُنظَّمَة باستخدام Microsoft Excel.</small></li>
+   </ul></div></details>
+   <details name="cv"><summary>المَهَارَات الشَّخصِيَّة</summary><div class="cvb"><ul>
+    <li>إِجَادَة استخدام منصَّات التَّعلِيم عَنْ بعد (أونلاين)، مثل: (Zoom - Google Meet)، وإِدَارَة الحَلَقَات باحتراف.</li>
+    <li>إِجَادَة تَحفِيظ القُرآن الكَرِيم، وتَدرِيس التَّجْوِيد، والقَاعِدَة النُّورانِيَّة عن بعد.</li>
+    <li>دِقَّة عَالِيَة في التَّدقِيق اللُّغوِيّ.</li>
+    <li>سُرعَة في إِنجَاز المَهَام دون التَّنَازُل عن الجَودَة.</li>
+    <li>قُدرَة قويَّة علىٰ العَمَل تَحتَ ضغط، مع الحِفَاظ علىٰ الجَودَة والدِّقَّة.</li>
+    <li>إِجَادَة استِخدَام بَرَامِج Microsoft Word - Microsoft Excel - Adobe InDesign - Canva باحتراف.</li>
+    <li>إِجَادَة التَّعلُّم السَّرِيع، والتَّطوِير الذَّاتِي المُستَمِرّ.</li>
+   </ul></div></details>
+   <details name="cv"><summary>اللُّغَة</summary><div class="cvb"><ul>
+    <li>اللُّغَة العربيَّة: مُتحَدِّثٌ أصلِي.</li>
+    <li>اللُّغة الإنجليزيَّة: جيِّد (قِرَاءَة، وكِتَابَة، وفَهمٍ عام).</li>
+   </ul></div></details>
+  </div>
 
   <button class="primary" id="save">📇 احفظ رقمي في هاتفك</button>
 
   <div class="grid">
-   <a class="btn full" href="tel:+201273766004"><i>📞</i> اتِّصال مُباشِر</a>
-   <a class="btn" href="https://wa.me/201063685714" target="_blank" rel="noopener"><i>💬</i> واتساب ١</a>
-   <a class="btn" href="https://wa.me/201159221239" target="_blank" rel="noopener"><i>💬</i> واتساب ٢</a>
+   <a class="btn or" href="tel:+201273766004"><i>📞</i> اتِّصال - أورانج</a>
+   <a class="btn vf" href="tel:+201063685714"><i>📞</i> اتِّصال - فودافون</a>
+   <a class="btn" href="https://wa.me/201273766004" target="_blank" rel="noopener"><i>💬</i> واتساب ١</a>
+   <a class="btn" href="https://wa.me/201063685714" target="_blank" rel="noopener"><i>💬</i> واتساب ٢</a>
   </div>
 
   <div class="label">✦ تابعني ✦</div>
@@ -82,6 +163,9 @@ textarea{width:100%;height:150px;direction:ltr;background:#050818;color:var(--te
    <a class="btn" href="https://www.facebook.com/share/1EuMV8a7rQ/" target="_blank" rel="noopener"><i>f</i> فيسبوك</a>
    <a class="btn" href="https://youtube.com/channel/UCl0emhI0Gt1Q9Uo4BmqaKrw?si=m_jfd8FXXvhmHf14" target="_blank" rel="noopener"><i>▶</i> يوتيوب</a>
    <a class="btn full" href="https://mizan-arabic.blogspot.com/?m=1" target="_blank" rel="noopener"><i>✒</i> مدوّنة ميزان العربية</a>
+   <a class="btn" href="https://www.linkedin.com/in/mahmoud-salah-807b5a301" target="_blank" rel="noopener"><i>in</i> لينكد إن</a>
+   <a class="btn" href="https://x.com/Al_Daramy" target="_blank" rel="noopener"><i>𝕏</i> تويتر</a>
+   <a class="btn full" href="https://t.me/Al_Daramy" target="_blank" rel="noopener"><i>✈</i> تيليجرام</a>
   </div>
 
   <button class="ghost" id="qrBtn">▦ رمز QR لمشاركة البطاقة</button>
@@ -120,8 +204,7 @@ function buildVCard(){
    'FN;CHARSET=UTF-8:مَحْمُودٌ بْنُ صَلَاحٍ الدَّرْعَمِيُّ',
    'TITLE;CHARSET=UTF-8:مُعلِّم قرآن كريم عن بعد',
    'TEL;TYPE=CELL,VOICE:+201273766004',
-   'TEL;TYPE=CELL,WHATSAPP:+201063685714',
-   'TEL;TYPE=CELL,WHATSAPP:+201159221239'];
+   'TEL;TYPE=CELL,VOICE:+201063685714'];
   if (EMAIL) L.push('EMAIL;TYPE=INTERNET:'+EMAIL);
   L.push('URL:https://mizan-arabic.blogspot.com/?m=1',
          'URL:https://www.facebook.com/share/1EuMV8a7rQ/',
